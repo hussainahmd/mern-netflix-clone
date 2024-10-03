@@ -3,7 +3,6 @@ import { User } from "../models/user.model.js"
 import { generateTokenAndSetCookie } from '../utils/generateToken.js'
 
 export async function signup(req, res) {
-    console.log('Signup route')
     try {
         const { email, password, username } = req.body
 
@@ -40,7 +39,6 @@ export async function signup(req, res) {
         })
 
         if(newUser){
-            console.log('signup newUser')
             generateTokenAndSetCookie(newUser._id, res)
             await newUser.save()
 

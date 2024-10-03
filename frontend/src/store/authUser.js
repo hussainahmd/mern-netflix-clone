@@ -22,7 +22,6 @@ export const useAuthStore = create((set) => ({
     login: async (credentials) => {
         set({ isLoggingIn: true })
         try {
-            // console.log('in login store')
             const response = await axios.post('/api/v1/auth/login', credentials)
             set({ user: response.data.user, isLoggingIn: false })
             toast.success('Logged in successfully')

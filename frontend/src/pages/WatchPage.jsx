@@ -92,10 +92,6 @@ const WatchPage = () => {
         setLoading(true)
     }
 
-    // console.log('Trailers:', trailers)
-    // console.log('Similar:', similarContent)
-    // console.log('Content:', content)
-
     if (loading) {
         return (
             <div className="min-h-screen bg-black p-10">
